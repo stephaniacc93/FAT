@@ -10,6 +10,7 @@ namespace FAT
     {
         public int memory;
         public bool isInUse;
+        public string nombre;
 
         public Data(int memory, bool isInUse)
         {

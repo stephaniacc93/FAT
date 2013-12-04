@@ -21,6 +21,8 @@ namespace FAT
             {
                 Console.WriteLine("Medida del archivo que quieres ingresar a memoria");
                 int archivo = int.Parse(Console.ReadLine());
+                Console.WriteLine("Ingresa Nombre del archivo");
+                string nombre = Console.ReadLine();
 
                 int mem = memory.Count(x => x.isInUse == false);
                 if (mem != 0)
@@ -33,6 +35,7 @@ namespace FAT
                             {
                                 archivo -= m.memory;
                                 m.isInUse = true;
+                                m.nombre = nombre;
                             }
                             else
                             {
